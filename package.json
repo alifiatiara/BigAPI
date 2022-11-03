@@ -20,5 +20,7 @@
   "_moduleAliases": {
     "$root": "test",
     "$helper": "test/helper"
-  }
+  },
+  "repository": "https://github.com/alifiatiara/BigAPI.git",
+  "author": "Alifia Tiara Hartono Putri <alifiatiarahp@gmail.com>"
 }

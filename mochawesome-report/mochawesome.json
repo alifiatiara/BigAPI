@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
+    "suites": 5,
+    "tests": 5,
     "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-11-01T08:46:16.652Z",
-    "end": "2022-11-01T08:46:18.263Z",
-    "duration": 1611,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 4,
+    "start": "2022-11-03T12:04:39.961Z",
+    "end": "2022-11-03T12:04:46.454Z",
+    "duration": 6493,
+    "testsRegistered": 5,
+    "passPercent": 20,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "92413925-d369-4d5d-b334-050c9620585d",
+      "uuid": "24bd5be8-1a7e-4f50-9ae6-c10cfa752eaa",
       "title": "",
-      "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\createtoken.test.js",
-      "file": "\\test\\scenarios\\createtoken.test.js",
+      "fullFile": "",
+      "file": "",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "6fb37f36-15e9-472a-8561-bce5620aeac0",
+          "uuid": "39414998-c757-4d85-8db5-cc03278dafcf",
           "title": "CreateToken",
           "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\createtoken.test.js",
           "file": "\\test\\scenarios\\createtoken.test.js",
@@ -38,7 +38,7 @@
               "title": "Should successful create token when input valid data",
               "fullTitle": "CreateToken Should successful create token when input valid data",
               "timedOut": false,
-              "duration": 1586,
+              "duration": 1587,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,192 @@
               "context": null,
               "code": "const response = await BigAPI.CreateToken(data.VALID_CREATE_TOKEN);\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
               "err": {},
-              "uuid": "04281e5d-e3f6-44da-a728-73c81fdddd3c",
-              "parentUUID": "6fb37f36-15e9-472a-8561-bce5620aeac0",
+              "uuid": "31393340-4552-4b46-9eef-754adb0c7727",
+              "parentUUID": "39414998-c757-4d85-8db5-cc03278dafcf",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "04281e5d-e3f6-44da-a728-73c81fdddd3c"
+            "31393340-4552-4b46-9eef-754adb0c7727"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1586,
+          "duration": 1587,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "2d0f07c5-6adb-47ed-9d3e-f280dd8384c7",
+          "title": "GetBookingIds",
+          "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js",
+          "file": "\\test\\scenarios\\GetBookingIds.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successful get booking ids when use valid token",
+              "fullTitle": "GetBookingIds Should successful get booking ids when use valid token",
+              "timedOut": false,
+              "duration": 3,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "setTimeout(20000);\nconst response = await BigAPI.GetBookingIds();\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data[0], [\"bookingid\"]);\nassert.isNumber(response.data[0].bookingid);",
+              "err": {
+                "message": "TypeError: Callback must be a function. Received 20000",
+                "estack": "TypeError [ERR_INVALID_CALLBACK]: Callback must be a function. Received 20000\n    at Context.<anonymous> (file:///C:/Users/alifi/OneDrive/Documents/StudyJam/BigAPI/test/scenarios/GetBookingIds.test.js:7:9)\n    at processImmediate (internal/timers.js:464:21)",
+                "diff": null
+              },
+              "uuid": "75e3dcc0-cbc3-4161-9163-e00d7eede737",
+              "parentUUID": "2d0f07c5-6adb-47ed-9d3e-f280dd8384c7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "75e3dcc0-cbc3-4161-9163-e00d7eede737"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 3,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "edccb09e-c03d-430e-a16c-182261b1094e",
+          "title": "GetBookingIdsName",
+          "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js",
+          "file": "\\test\\scenarios\\GetBookingIds.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should succesful get booking ids when use valid firstname and lastname",
+              "fullTitle": "GetBookingIdsName Should succesful get booking ids when use valid firstname and lastname",
+              "timedOut": true,
+              "duration": 2010,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await BigAPI.GetBookingIdsName(data.USER_DATA);\n    \nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data[0], [\"bookingid\"]);\nassert.isNumber(response.data[0].bookingid);",
+              "err": {
+                "message": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js)",
+                "estack": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js)\n    at listOnTimeout (internal/timers.js:557:17)\n    at processTimers (internal/timers.js:500:7)",
+                "diff": null
+              },
+              "uuid": "ada1b244-b220-4d59-b086-db91da1cd251",
+              "parentUUID": "edccb09e-c03d-430e-a16c-182261b1094e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ada1b244-b220-4d59-b086-db91da1cd251"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2010,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "30bcc18f-dc05-49cb-8237-ca76b91a2f6d",
+          "title": "GetBookingIdsDate",
+          "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js",
+          "file": "\\test\\scenarios\\GetBookingIds.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should succesful get booking ids when use valid checkin and checkout",
+              "fullTitle": "GetBookingIdsDate Should succesful get booking ids when use valid checkin and checkout",
+              "timedOut": true,
+              "duration": 2003,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await BigAPI.GetBookingIdsDate(data.USER_DATA);\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data[0], [\"bookingid\"]);\nassert.isNumber(response.data[0].bookingid);",
+              "err": {
+                "message": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js)",
+                "estack": "Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure \"done()\" is called; if returning a Promise, ensure it resolves. (C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js)\n    at listOnTimeout (internal/timers.js:557:17)\n    at processTimers (internal/timers.js:500:7)",
+                "diff": null
+              },
+              "uuid": "8e31854d-23e3-40ca-babf-1d301546f287",
+              "parentUUID": "30bcc18f-dc05-49cb-8237-ca76b91a2f6d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8e31854d-23e3-40ca-babf-1d301546f287"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2003,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9a052652-cbfa-43ea-8a67-9a09f75a657a",
+          "title": "Healtcheck",
+          "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\healthcheck.test.js",
+          "file": "\\test\\scenarios\\healthcheck.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successful get health check endpoint to confirm whether the API is up and running.",
+              "fullTitle": "Healtcheck Should successful get health check endpoint to confirm whether the API is up and running.",
+              "timedOut": false,
+              "duration": 861,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await BigAPI.HealthCheck();\nassert.equal(response.status, 201);\nassert.containsAllKeys(response.data, [\"Created\"]);\nassert.isNumber(response.data.Created);",
+              "err": {
+                "message": "AssertionError: expected 'Created' to contain key 'Created'",
+                "estack": "AssertionError: expected 'Created' to contain key 'Created'\n    at Context.<anonymous> (file:///C:/Users/alifi/OneDrive/Documents/StudyJam/BigAPI/test/scenarios/healthcheck.test.js:9:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": " [\n-   \"0\"\n-   \"1\"\n-   \"2\"\n-   \"3\"\n-   \"4\"\n-   \"5\"\n-   \"6\"\n+   \"Created\"\n ]\n"
+              },
+              "uuid": "ef104754-ec58-4d53-b6fa-a992e3e167dc",
+              "parentUUID": "9a052652-cbfa-43ea-8a67-9a09f75a657a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ef104754-ec58-4d53-b6fa-a992e3e167dc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 861,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
