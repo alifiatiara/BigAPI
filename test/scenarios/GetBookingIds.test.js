@@ -4,7 +4,6 @@ import * as data from "$root/data/token.data.js";
 
 describe('GetBookingIds', function() {
     it('Should successful get booking ids when use valid token', async() => {
-        setTimeout(20000);
         const response = await BigAPI.GetBookingIds();
         
         assert.equal(response.status, 200);
@@ -14,7 +13,7 @@ describe('GetBookingIds', function() {
 });
 
 describe('GetBookingIdsName', function() {
-    it('Should succesful get booking ids when use valid firstname and lastname', async() => {
+    it('Should successful get booking ids when use valid firstname and lastname', async() => {
         const response = await BigAPI.GetBookingIdsName(data.USER_DATA);
     
         assert.equal(response.status, 200);
@@ -24,7 +23,7 @@ describe('GetBookingIdsName', function() {
 });
 
 describe('GetBookingIdsDate', function() {
-    it('Should succesful get booking ids when use valid checkin and checkout', async() => {
+    it('Should successful get booking ids when use valid checkin and checkout', async() => {
         const response = await BigAPI.GetBookingIdsDate(data.USER_DATA);
 
         assert.equal(response.status, 200);

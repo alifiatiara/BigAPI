@@ -6,7 +6,7 @@ describe('Healtcheck', function() {
         const response = await BigAPI.HealthCheck();
 
         assert.equal(response.status, 201);
-        assert.containsAllKeys(response.data, ["Created"]);
-        assert.isNumber(response.data.Created);
+        assert.equal(response.data, ["Created"]);
+        assert.isString(response.data);
     });
 });
