@@ -5,9 +5,9 @@
     "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2022-11-04T01:36:38.842Z",
-    "end": "2022-11-04T01:36:46.736Z",
-    "duration": 7894,
+    "start": "2022-11-10T12:37:25.344Z",
+    "end": "2022-11-10T12:37:34.527Z",
+    "duration": 9183,
     "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "59fd99e6-9dab-483a-816a-755475ba71bc",
+      "uuid": "385f4ea2-bf08-4e7f-a17b-df6c66440e25",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8ab330c1-17dd-4e2a-91df-2afda99db8ec",
+          "uuid": "c5d794bf-7505-453b-ad8a-92f1f405e9b8",
           "title": "CreateToken",
           "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\createtoken.test.js",
           "file": "\\test\\scenarios\\createtoken.test.js",
@@ -38,7 +38,7 @@
               "title": "Should successful create token when input valid data",
               "fullTitle": "CreateToken Should successful create token when input valid data",
               "timedOut": false,
-              "duration": 1440,
+              "duration": 1606,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,26 @@
               "context": null,
               "code": "const response = await BigAPI.CreateToken(data.VALID_CREATE_TOKEN);\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data, [\"token\"]);\nassert.isString(response.data.token);",
               "err": {},
-              "uuid": "26046293-8f2b-4078-81a5-ac17bd34c7b3",
-              "parentUUID": "8ab330c1-17dd-4e2a-91df-2afda99db8ec",
+              "uuid": "a6388802-0e9f-4a6f-8af7-857ea78cb02d",
+              "parentUUID": "c5d794bf-7505-453b-ad8a-92f1f405e9b8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "26046293-8f2b-4078-81a5-ac17bd34c7b3"
+            "a6388802-0e9f-4a6f-8af7-857ea78cb02d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1440,
+          "duration": 1606,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
         },
         {
-          "uuid": "f6623e6e-5559-4ef3-be21-f3797f75ce09",
+          "uuid": "afa10924-d0a6-43f2-bda0-19822b7c480e",
           "title": "GetBookingIds",
           "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js",
           "file": "\\test\\scenarios\\GetBookingIds.test.js",
@@ -77,7 +77,7 @@
               "title": "Should successful get booking ids when use valid token",
               "fullTitle": "GetBookingIds Should successful get booking ids when use valid token",
               "timedOut": false,
-              "duration": 1849,
+              "duration": 2282,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,26 +86,26 @@
               "context": null,
               "code": "const response = await BigAPI.GetBookingIds();\n\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data[0], [\"bookingid\"]);\nassert.isNumber(response.data[0].bookingid);",
               "err": {},
-              "uuid": "5dcaefef-5eeb-4bc3-a853-5fd6a696fa59",
-              "parentUUID": "f6623e6e-5559-4ef3-be21-f3797f75ce09",
+              "uuid": "e0fcf9d1-408a-4277-9e5c-f6418f38f37a",
+              "parentUUID": "afa10924-d0a6-43f2-bda0-19822b7c480e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "5dcaefef-5eeb-4bc3-a853-5fd6a696fa59"
+            "e0fcf9d1-408a-4277-9e5c-f6418f38f37a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1849,
+          "duration": 2282,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
         },
         {
-          "uuid": "193c2aa4-739a-4dfb-9b9c-421270531d2f",
+          "uuid": "bdc0a81a-9b84-4bfd-80cc-964c5b127512",
           "title": "GetBookingIdsName",
           "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js",
           "file": "\\test\\scenarios\\GetBookingIds.test.js",
@@ -116,7 +116,7 @@
               "title": "Should successful get booking ids when use valid firstname and lastname",
               "fullTitle": "GetBookingIdsName Should successful get booking ids when use valid firstname and lastname",
               "timedOut": false,
-              "duration": 1801,
+              "duration": 2246,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -125,26 +125,26 @@
               "context": null,
               "code": "const response = await BigAPI.GetBookingIdsName(data.USER_DATA);\n    \nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data[0], [\"bookingid\"]);\nassert.isNumber(response.data[0].bookingid);",
               "err": {},
-              "uuid": "c6de3301-4a91-4522-a5d2-96242a78b7ea",
-              "parentUUID": "193c2aa4-739a-4dfb-9b9c-421270531d2f",
+              "uuid": "5c9034e9-f251-4565-aee4-1ff9ea77bd8e",
+              "parentUUID": "bdc0a81a-9b84-4bfd-80cc-964c5b127512",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c6de3301-4a91-4522-a5d2-96242a78b7ea"
+            "5c9034e9-f251-4565-aee4-1ff9ea77bd8e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1801,
+          "duration": 2246,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
         },
         {
-          "uuid": "0e36cc9a-bcfa-483b-909d-7f52df3374c0",
+          "uuid": "88646c9b-aa4d-4cd0-abb8-cef849e86721",
           "title": "GetBookingIdsDate",
           "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\GetBookingIds.test.js",
           "file": "\\test\\scenarios\\GetBookingIds.test.js",
@@ -155,7 +155,7 @@
               "title": "Should successful get booking ids when use valid checkin and checkout",
               "fullTitle": "GetBookingIdsDate Should successful get booking ids when use valid checkin and checkout",
               "timedOut": false,
-              "duration": 1863,
+              "duration": 2156,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -164,26 +164,26 @@
               "context": null,
               "code": "const response = await BigAPI.GetBookingIdsDate(data.USER_DATA);\nassert.equal(response.status, 200);\nassert.containsAllKeys(response.data[0], [\"bookingid\"]);\nassert.isNumber(response.data[0].bookingid);",
               "err": {},
-              "uuid": "2343d966-22c4-4fac-92ea-976db334d20e",
-              "parentUUID": "0e36cc9a-bcfa-483b-909d-7f52df3374c0",
+              "uuid": "00502151-1942-4bb7-bbf7-68e7ca83a241",
+              "parentUUID": "88646c9b-aa4d-4cd0-abb8-cef849e86721",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "2343d966-22c4-4fac-92ea-976db334d20e"
+            "00502151-1942-4bb7-bbf7-68e7ca83a241"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1863,
+          "duration": 2156,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
         },
         {
-          "uuid": "957b8521-a88a-4c5f-811c-886423a43c95",
+          "uuid": "9695b5cf-fab7-4fe6-ad5e-576f46f74412",
           "title": "Healtcheck",
           "fullFile": "C:\\Users\\alifi\\OneDrive\\Documents\\StudyJam\\BigAPI\\test\\scenarios\\healthcheck.test.js",
           "file": "\\test\\scenarios\\healthcheck.test.js",
@@ -194,7 +194,7 @@
               "title": "Should successful get health check endpoint to confirm whether the API is up and running.",
               "fullTitle": "Healtcheck Should successful get health check endpoint to confirm whether the API is up and running.",
               "timedOut": false,
-              "duration": 924,
+              "duration": 877,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -203,20 +203,20 @@
               "context": null,
               "code": "const response = await BigAPI.HealthCheck();\nassert.equal(response.status, 201);\nassert.equal(response.data, [\"Created\"]);\nassert.isString(response.data);",
               "err": {},
-              "uuid": "8aa9bc1d-e1a7-4b3e-893e-367095060b11",
-              "parentUUID": "957b8521-a88a-4c5f-811c-886423a43c95",
+              "uuid": "802f65d9-426a-4a04-9139-73fb95d3b309",
+              "parentUUID": "9695b5cf-fab7-4fe6-ad5e-576f46f74412",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8aa9bc1d-e1a7-4b3e-893e-367095060b11"
+            "802f65d9-426a-4a04-9139-73fb95d3b309"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 924,
+          "duration": 877,
           "root": false,
           "rootEmpty": false,
           "_timeout": 180000
